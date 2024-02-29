@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title%} Cuenta {% endblock %}
+
+{% block body %}
+<body class="text-center" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJDT05GSUciOiJkaXNhYmxlZCJ9LCJ2ZXJzaW9uIjoiMi4wLjEyIiwic2NvcmUiOjIwMDEyfV0=">
+    <form class="form-signin" action = "/contacto" method="POST">
+  <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="email" id="username" class="form-control" placeholder="Email address" >
+
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="password" class="form-control" placeholder="Password" >
+  <div class="checkbox mb-3" bis_skin_checked="1">
+
+    </h1>
+  </div>
+  <a href="/">
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  <a/>
+  <p class="mt-5 mb-3 text-muted">© 2017-2020</p>
+</form>
+
+
+</body>
+{% endblock %}
