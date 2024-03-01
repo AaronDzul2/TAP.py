@@ -1,4 +1,5 @@
-from flask import Flask, render_template,request,url_for
+from flask import Flask, render_template, request
+
 app = Flask(__name__)
 
 """
@@ -9,9 +10,6 @@ def principal():
 @app.route('/contacto')
 def contacto():
     return "Aquí podemos ponernos en contacto"
-    
-    python .\index.py
-    
 """
 @app.route('/')
 def principal():
@@ -30,7 +28,7 @@ def contacto():
     if request.method == 'POST':
         username = (request.form['username'])
         password = (request.form['password'])
-        return render_template('index.html',username=username,password=password)
+        return render_template('contacto.html',username=username,password=password)
     else:
         return render_template('contacto.html')
 
