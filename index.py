@@ -11,7 +11,7 @@ def principal():
 def contacto():
     return "Aquí podemos ponernos en contacto"
 """
-@app.route('/')
+@app.route('/') 
 def principal():
     return render_template('index.html')
 
@@ -25,12 +25,19 @@ def mostrarLenguajes():
 
 @app.route('/contacto' , methods = ['GET','POST'])
 def contacto():
+    user = {
+        'name': '',
+        'email':''
+    }
+    if request.args:
+        user['name'] = request.args['nombre']
+        user['email'] = request.args['correo']
+        
     if request.method == 'POST':
-        username = (request.form['username'])
-        password = (request.form['password'])
-        return render_template('contacto.html',username=username,password=password)
-    else:
-        return render_template('contacto.html')
+        user['name'] = request.form['nombre']
+        user['email'] = request.form['correo']
+        
+    return render_template('contacto.html', usuario=user)
 
 
 if __name__ == '__main__':
